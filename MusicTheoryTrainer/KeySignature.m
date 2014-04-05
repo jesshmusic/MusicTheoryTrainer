@@ -153,60 +153,60 @@ flatWidth, sharpWidth, clefWidth;
 
 - (void)setKeySignatureWithString:(NSString *)newKeySignature {
     
-    self.keyString = newKeySignature;
-    if ([self.keyString isEqualToString:@"G"])
+    self.keySignatureName = newKeySignature;
+    if ([self.keySignatureName isEqualToString:@"G"])
     {
         [self setNumberOfAccidentals:1 isSharpKey:true];
     }
-    else if([self.keyString isEqualToString:@"D"])
+    else if([self.keySignatureName isEqualToString:@"D"])
     {
         [self setNumberOfAccidentals:2 isSharpKey:true];
     }
-    else if([self.keyString isEqualToString:@"A"])
+    else if([self.keySignatureName isEqualToString:@"A"])
     {
         [self setNumberOfAccidentals:3 isSharpKey:true];
     }
-    else if([self.keyString isEqualToString:@"E"])
+    else if([self.keySignatureName isEqualToString:@"E"])
     {
         [self setNumberOfAccidentals:4 isSharpKey:true];
     }
-    else if([self.keyString isEqualToString:@"B"])
+    else if([self.keySignatureName isEqualToString:@"B"])
     {
         [self setNumberOfAccidentals:5 isSharpKey:true];
     }
-    else if([self.keyString isEqualToString:@"F#"])
+    else if([self.keySignatureName isEqualToString:@"F#"])
     {
         [self setNumberOfAccidentals:6 isSharpKey:true];
     }
-    else if([self.keyString isEqualToString:@"C#"])
+    else if([self.keySignatureName isEqualToString:@"C#"])
     {
         [self setNumberOfAccidentals:7 isSharpKey:true];
     }
-    else if([self.keyString isEqualToString:@"F"])
+    else if([self.keySignatureName isEqualToString:@"F"])
     {
         [self setNumberOfAccidentals:1 isSharpKey:false];
     }
-    else if([self.keyString isEqualToString:@"Bb"])
+    else if([self.keySignatureName isEqualToString:@"Bb"])
     {
         [self setNumberOfAccidentals:2 isSharpKey:false];
     }
-    else if([self.keyString isEqualToString:@"Eb"])
+    else if([self.keySignatureName isEqualToString:@"Eb"])
     {
         [self setNumberOfAccidentals:3 isSharpKey:false];
     }
-    else if([self.keyString isEqualToString:@"Ab"])
+    else if([self.keySignatureName isEqualToString:@"Ab"])
     {
         [self setNumberOfAccidentals:4 isSharpKey:false];
     }
-    else if([self.keyString isEqualToString:@"Db"])
+    else if([self.keySignatureName isEqualToString:@"Db"])
     {
         [self setNumberOfAccidentals:5 isSharpKey:false];
     }
-    else if([self.keyString isEqualToString:@"Gb"])
+    else if([self.keySignatureName isEqualToString:@"Gb"])
     {
         [self setNumberOfAccidentals:6 isSharpKey:false];
     }
-    else if([self.keyString isEqualToString:@"Cb"])
+    else if([self.keySignatureName isEqualToString:@"Cb"])
     {
         [self setNumberOfAccidentals:7 isSharpKey:false];
     }
@@ -230,13 +230,13 @@ flatWidth, sharpWidth, clefWidth;
 - (void)setClef:(int)newClef
 {
     self.currentClef = newClef;
-    [self setKeySignatureWithString:self.keyString];
+    [self setKeySignatureWithString:self.keySignatureName];
 }
 
 - (void)setNewKeySignature:(NSString *)newKeySignature
 {
-    self.keyString = newKeySignature;
-    [self setKeySignatureWithString:self.keyString];
+    self.keySignatureName = newKeySignature;
+    [self setKeySignatureWithString:self.keySignatureName];
 }
 
 

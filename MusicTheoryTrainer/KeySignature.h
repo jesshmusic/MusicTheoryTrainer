@@ -14,7 +14,7 @@
 
 @property int currentClef;
 
-@property NSString *keyString;
+@property NSString *keySignatureName;
 @property NSPoint firstAccidental;
 @property NSPoint secondAccidental;
 @property NSPoint thirdAccidental;
