@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E102C82218DF412F002F6ACF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E102C82118DF412F002F6ACF /* Cocoa.framework */; };
+		E102C82C18DF412F002F6ACF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E102C82A18DF412F002F6ACF /* InfoPlist.strings */; };
+		E102C82E18DF412F002F6ACF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E102C82D18DF412F002F6ACF /* main.m */; };
+		E102C83218DF412F002F6ACF /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E102C83018DF412F002F6ACF /* Credits.rtf */; };
+		E102C83518DF412F002F6ACF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E102C83418DF412F002F6ACF /* AppDelegate.m */; };
+		E102C83B18DF412F002F6ACF /* MusicTheoryTrainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E102C83918DF412F002F6ACF /* MusicTheoryTrainer.xcdatamodeld */; };
+		E102C83D18DF412F002F6ACF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E102C83C18DF412F002F6ACF /* Images.xcassets */; };
+		E102C84418DF412F002F6ACF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E102C84318DF412F002F6ACF /* XCTest.framework */; };
+		E102C84518DF412F002F6ACF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E102C82118DF412F002F6ACF /* Cocoa.framework */; };
+		E102C84D18DF412F002F6ACF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E102C84B18DF412F002F6ACF /* InfoPlist.strings */; };
+		E102C84F18DF412F002F6ACF /* MusicTheoryTrainerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E102C84E18DF412F002F6ACF /* MusicTheoryTrainerTests.m */; };
+		E102C86218DF41D0002F6ACF /* KeySignature.m in Sources */ = {isa = PBXBuildFile; fileRef = E102C85918DF41D0002F6ACF /* KeySignature.m */; };
+		E102C86318DF41D0002F6ACF /* KeySigIdentification.m in Sources */ = {isa = PBXBuildFile; fileRef = E102C85B18DF41D0002F6ACF /* KeySigIdentification.m */; };
+		E102C86418DF41D0002F6ACF /* KeySigAndClef.m in Sources */ = {isa = PBXBuildFile; fileRef = E102C85D18DF41D0002F6ACF /* KeySigAndClef.m */; };
+		E102C86518DF41D0002F6ACF /* MusicDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = E102C85F18DF41D0002F6ACF /* MusicDisplayView.m */; };
+		E102C86618DF41D0002F6ACF /* MusicTheoryConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E102C86118DF41D0002F6ACF /* MusicTheoryConstants.m */; };
+		E102C86818DF41FA002F6ACF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E102C86718DF41FA002F6ACF /* MainMenu.xib */; };
+		E102C86E18DF43A3002F6ACF /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E102C86D18DF43A3002F6ACF /* User.m */; };
+		E102C8B718DF96C6002F6ACF /* KeySigGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = E102C8B618DF96C6002F6ACF /* KeySigGameController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E102C84618DF412F002F6ACF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E102C81618DF412F002F6ACF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E102C81D18DF412F002F6ACF;
+			remoteInfo = MusicTheoryTrainer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E102C81E18DF412F002F6ACF /* MusicTheoryTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicTheoryTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E102C82118DF412F002F6ACF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		E102C82418DF412F002F6ACF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		E102C82518DF412F002F6ACF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E102C82618DF412F002F6ACF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E102C82918DF412F002F6ACF /* MusicTheoryTrainer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MusicTheoryTrainer-Info.plist"; sourceTree = "<group>"; };
+		E102C82B18DF412F002F6ACF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E102C82D18DF412F002F6ACF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E102C82F18DF412F002F6ACF /* MusicTheoryTrainer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicTheoryTrainer-Prefix.pch"; sourceTree = "<group>"; };
+		E102C83118DF412F002F6ACF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		E102C83318DF412F002F6ACF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E102C83418DF412F002F6ACF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E102C83A18DF412F002F6ACF /* MusicTheoryTrainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MusicTheoryTrainer.xcdatamodel; sourceTree = "<group>"; };
+		E102C83C18DF412F002F6ACF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E102C84218DF412F002F6ACF /* MusicTheoryTrainerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicTheoryTrainerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E102C84318DF412F002F6ACF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		E102C84A18DF412F002F6ACF /* MusicTheoryTrainerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MusicTheoryTrainerTests-Info.plist"; sourceTree = "<group>"; };
+		E102C84C18DF412F002F6ACF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E102C84E18DF412F002F6ACF /* MusicTheoryTrainerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicTheoryTrainerTests.m; sourceTree = "<group>"; };
+		E102C85818DF41D0002F6ACF /* KeySignature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeySignature.h; sourceTree = "<group>"; };
+		E102C85918DF41D0002F6ACF /* KeySignature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeySignature.m; sourceTree = "<group>"; };
+		E102C85A18DF41D0002F6ACF /* KeySigIdentification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeySigIdentification.h; sourceTree = "<group>"; };
+		E102C85B18DF41D0002F6ACF /* KeySigIdentification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeySigIdentification.m; sourceTree = "<group>"; };
+		E102C85C18DF41D0002F6ACF /* KeySigAndClef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeySigAndClef.h; sourceTree = "<group>"; };
+		E102C85D18DF41D0002F6ACF /* KeySigAndClef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeySigAndClef.m; sourceTree = "<group>"; };
+		E102C85E18DF41D0002F6ACF /* MusicDisplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicDisplayView.h; sourceTree = "<group>"; };
+		E102C85F18DF41D0002F6ACF /* MusicDisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicDisplayView.m; sourceTree = "<group>"; };
+		E102C86018DF41D0002F6ACF /* MusicTheoryConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicTheoryConstants.h; sourceTree = "<group>"; };
+		E102C86118DF41D0002F6ACF /* MusicTheoryConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicTheoryConstants.m; sourceTree = "<group>"; };
+		E102C86718DF41FA002F6ACF /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		E102C86C18DF43A3002F6ACF /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		E102C86D18DF43A3002F6ACF /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		E102C8B518DF96C6002F6ACF /* KeySigGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeySigGameController.h; sourceTree = "<group>"; };
+		E102C8B618DF96C6002F6ACF /* KeySigGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeySigGameController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E102C81B18DF412F002F6ACF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E102C82218DF412F002F6ACF /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E102C83F18DF412F002F6ACF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E102C84518DF412F002F6ACF /* Cocoa.framework in Frameworks */,
+				E102C84418DF412F002F6ACF /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E102C81518DF412F002F6ACF = {
+			isa = PBXGroup;
+			children = (
+				E102C82718DF412F002F6ACF /* MusicTheoryTrainer */,
+				E102C84818DF412F002F6ACF /* MusicTheoryTrainerTests */,
+				E102C82018DF412F002F6ACF /* Frameworks */,
+				E102C81F18DF412F002F6ACF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E102C81F18DF412F002F6ACF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E102C81E18DF412F002F6ACF /* MusicTheoryTrainer.app */,
+				E102C84218DF412F002F6ACF /* MusicTheoryTrainerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E102C82018DF412F002F6ACF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E102C82118DF412F002F6ACF /* Cocoa.framework */,
+				E102C84318DF412F002F6ACF /* XCTest.framework */,
+				E102C82318DF412F002F6ACF /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E102C82318DF412F002F6ACF /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E102C82418DF412F002F6ACF /* AppKit.framework */,
+				E102C82518DF412F002F6ACF /* CoreData.framework */,
+				E102C82618DF412F002F6ACF /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		E102C82718DF412F002F6ACF /* MusicTheoryTrainer */ = {
+			isa = PBXGroup;
+			children = (
+				E102C83318DF412F002F6ACF /* AppDelegate.h */,
+				E102C83418DF412F002F6ACF /* AppDelegate.m */,
+				E102C8B518DF96C6002F6ACF /* KeySigGameController.h */,
+				E102C8B618DF96C6002F6ACF /* KeySigGameController.m */,
+				E102C85818DF41D0002F6ACF /* KeySignature.h */,
+				E102C85918DF41D0002F6ACF /* KeySignature.m */,
+				E102C85A18DF41D0002F6ACF /* KeySigIdentification.h */,
+				E102C85B18DF41D0002F6ACF /* KeySigIdentification.m */,
+				E102C85C18DF41D0002F6ACF /* KeySigAndClef.h */,
+				E102C85D18DF41D0002F6ACF /* KeySigAndClef.m */,
+				E102C85E18DF41D0002F6ACF /* MusicDisplayView.h */,
+				E102C85F18DF41D0002F6ACF /* MusicDisplayView.m */,
+				E102C86018DF41D0002F6ACF /* MusicTheoryConstants.h */,
+				E102C86118DF41D0002F6ACF /* MusicTheoryConstants.m */,
+				E102C86718DF41FA002F6ACF /* MainMenu.xib */,
+				E102C83C18DF412F002F6ACF /* Images.xcassets */,
+				E102C83918DF412F002F6ACF /* MusicTheoryTrainer.xcdatamodeld */,
+				E102C86C18DF43A3002F6ACF /* User.h */,
+				E102C86D18DF43A3002F6ACF /* User.m */,
+				E102C82818DF412F002F6ACF /* Supporting Files */,
+			);
+			path = MusicTheoryTrainer;
+			sourceTree = "<group>";
+		};
+		E102C82818DF412F002F6ACF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E102C82918DF412F002F6ACF /* MusicTheoryTrainer-Info.plist */,
+				E102C82A18DF412F002F6ACF /* InfoPlist.strings */,
+				E102C82D18DF412F002F6ACF /* main.m */,
+				E102C82F18DF412F002F6ACF /* MusicTheoryTrainer-Prefix.pch */,
+				E102C83018DF412F002F6ACF /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E102C84818DF412F002F6ACF /* MusicTheoryTrainerTests */ = {
+			isa = PBXGroup;
+			children = (
+				E102C84E18DF412F002F6ACF /* MusicTheoryTrainerTests.m */,
+				E102C84918DF412F002F6ACF /* Supporting Files */,
+			);
+			path = MusicTheoryTrainerTests;
+			sourceTree = "<group>";
+		};
+		E102C84918DF412F002F6ACF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E102C84A18DF412F002F6ACF /* MusicTheoryTrainerTests-Info.plist */,
+				E102C84B18DF412F002F6ACF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E102C81D18DF412F002F6ACF /* MusicTheoryTrainer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E102C85218DF412F002F6ACF /* Build configuration list for PBXNativeTarget "MusicTheoryTrainer" */;
+			buildPhases = (
+				E102C81A18DF412F002F6ACF /* Sources */,
+				E102C81B18DF412F002F6ACF /* Frameworks */,
+				E102C81C18DF412F002F6ACF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MusicTheoryTrainer;
+			productName = MusicTheoryTrainer;
+			productReference = E102C81E18DF412F002F6ACF /* MusicTheoryTrainer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E102C84118DF412F002F6ACF /* MusicTheoryTrainerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E102C85518DF412F002F6ACF /* Build configuration list for PBXNativeTarget "MusicTheoryTrainerTests" */;
+			buildPhases = (
+				E102C83E18DF412F002F6ACF /* Sources */,
+				E102C83F18DF412F002F6ACF /* Frameworks */,
+				E102C84018DF412F002F6ACF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E102C84718DF412F002F6ACF /* PBXTargetDependency */,
+			);
+			name = MusicTheoryTrainerTests;
+			productName = MusicTheoryTrainerTests;
+			productReference = E102C84218DF412F002F6ACF /* MusicTheoryTrainerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E102C81618DF412F002F6ACF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JH;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Jess Hendricks";
+				TargetAttributes = {
+					E102C84118DF412F002F6ACF = {
+						TestTargetID = E102C81D18DF412F002F6ACF;
+					};
+				};
+			};
+			buildConfigurationList = E102C81918DF412F002F6ACF /* Build configuration list for PBXProject "MusicTheoryTrainer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E102C81518DF412F002F6ACF;
+			productRefGroup = E102C81F18DF412F002F6ACF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E102C81D18DF412F002F6ACF /* MusicTheoryTrainer */,
+				E102C84118DF412F002F6ACF /* MusicTheoryTrainerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E102C81C18DF412F002F6ACF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E102C82C18DF412F002F6ACF /* InfoPlist.strings in Resources */,
+				E102C83D18DF412F002F6ACF /* Images.xcassets in Resources */,
+				E102C83218DF412F002F6ACF /* Credits.rtf in Resources */,
+				E102C86818DF41FA002F6ACF /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E102C84018DF412F002F6ACF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E102C84D18DF412F002F6ACF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E102C81A18DF412F002F6ACF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E102C86218DF41D0002F6ACF /* KeySignature.m in Sources */,
+				E102C8B718DF96C6002F6ACF /* KeySigGameController.m in Sources */,
+				E102C83518DF412F002F6ACF /* AppDelegate.m in Sources */,
+				E102C86E18DF43A3002F6ACF /* User.m in Sources */,
+				E102C83B18DF412F002F6ACF /* MusicTheoryTrainer.xcdatamodeld in Sources */,
+				E102C82E18DF412F002F6ACF /* main.m in Sources */,
+				E102C86318DF41D0002F6ACF /* KeySigIdentification.m in Sources */,
+				E102C86618DF41D0002F6ACF /* MusicTheoryConstants.m in Sources */,
+				E102C86418DF41D0002F6ACF /* KeySigAndClef.m in Sources */,
+				E102C86518DF41D0002F6ACF /* MusicDisplayView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E102C83E18DF412F002F6ACF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E102C84F18DF412F002F6ACF /* MusicTheoryTrainerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E102C84718DF412F002F6ACF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E102C81D18DF412F002F6ACF /* MusicTheoryTrainer */;
+			targetProxy = E102C84618DF412F002F6ACF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E102C82A18DF412F002F6ACF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E102C82B18DF412F002F6ACF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E102C83018DF412F002F6ACF /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E102C83118DF412F002F6ACF /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		E102C84B18DF412F002F6ACF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E102C84C18DF412F002F6ACF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E102C85018DF412F002F6ACF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E102C85118DF412F002F6ACF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E102C85318DF412F002F6ACF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MusicTheoryTrainer/MusicTheoryTrainer-Prefix.pch";
+				INFOPLIST_FILE = "MusicTheoryTrainer/MusicTheoryTrainer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E102C85418DF412F002F6ACF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MusicTheoryTrainer/MusicTheoryTrainer-Prefix.pch";
+				INFOPLIST_FILE = "MusicTheoryTrainer/MusicTheoryTrainer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E102C85618DF412F002F6ACF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MusicTheoryTrainer.app/Contents/MacOS/MusicTheoryTrainer";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MusicTheoryTrainer/MusicTheoryTrainer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MusicTheoryTrainerTests/MusicTheoryTrainerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		E102C85718DF412F002F6ACF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MusicTheoryTrainer.app/Contents/MacOS/MusicTheoryTrainer";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MusicTheoryTrainer/MusicTheoryTrainer-Prefix.pch";
+				INFOPLIST_FILE = "MusicTheoryTrainerTests/MusicTheoryTrainerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E102C81918DF412F002F6ACF /* Build configuration list for PBXProject "MusicTheoryTrainer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E102C85018DF412F002F6ACF /* Debug */,
+				E102C85118DF412F002F6ACF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E102C85218DF412F002F6ACF /* Build configuration list for PBXNativeTarget "MusicTheoryTrainer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E102C85318DF412F002F6ACF /* Debug */,
+				E102C85418DF412F002F6ACF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E102C85518DF412F002F6ACF /* Build configuration list for PBXNativeTarget "MusicTheoryTrainerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E102C85618DF412F002F6ACF /* Debug */,
+				E102C85718DF412F002F6ACF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E102C83918DF412F002F6ACF /* MusicTheoryTrainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E102C83A18DF412F002F6ACF /* MusicTheoryTrainer.xcdatamodel */,
+			);
+			currentVersion = E102C83A18DF412F002F6ACF /* MusicTheoryTrainer.xcdatamodel */;
+			path = MusicTheoryTrainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E102C81618DF412F002F6ACF /* Project object */;
+}
