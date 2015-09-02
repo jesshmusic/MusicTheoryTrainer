@@ -19,7 +19,7 @@
     NSMutableDictionary *attributes;
     NSMutableDictionary *musicFontAttributes;
     
-    NSView *musicViewWindow;
+//    NSView *musicViewWindow;
 
     
     //Staff Size and Notation Placement Variables

@@ -10,29 +10,29 @@
 	<string>MusicTheoryTrainer</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>DF6D6244-B6CA-4DEF-9E1D-1A3D5A9C9AB2</key>
+		<key>EC9173EFA3D126503A793BFE9F0692EC5717227E</key>
 		<string>https://github.com/jesshmusic/MusicTheoryTrainer.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MusicTheoryTrainer.xcodeproj/project.xcworkspace</string>
+	<string>MusicTheoryTrainer.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>DF6D6244-B6CA-4DEF-9E1D-1A3D5A9C9AB2</key>
+		<key>EC9173EFA3D126503A793BFE9F0692EC5717227E</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/jesshmusic/MusicTheoryTrainer.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>DF6D6244-B6CA-4DEF-9E1D-1A3D5A9C9AB2</string>
+	<string>EC9173EFA3D126503A793BFE9F0692EC5717227E</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>DF6D6244-B6CA-4DEF-9E1D-1A3D5A9C9AB2</string>
+			<string>EC9173EFA3D126503A793BFE9F0692EC5717227E</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MusicTheoryTrainer</string>
 		</dict>

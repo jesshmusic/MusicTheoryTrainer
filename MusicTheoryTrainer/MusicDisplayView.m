@@ -22,6 +22,7 @@
         flat = [NSString stringWithFormat:@"%C", FLAT_SIGN];
         sharp = [NSString stringWithFormat:@"%C", SHARP_SIGN];
         currentKeySignature = [KeySignature sharedKeySignature];
+//        NSLog(@"Available fonts: %@", [[[NSFontManager sharedFontManager] availableFontFamilies] description]);
     }
     return self;
 }
@@ -89,10 +90,10 @@
                   [NSFont fontWithName:@"Helvetica Neue" size:14.0], NSFontAttributeName,
                   [NSColor blackColor], NSForegroundColorAttributeName,
                   nil];
-    musicFontAttributes = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                           [NSFont fontWithName:@"Bravura" size:musicFontSize], NSFontAttributeName,
-                           [NSColor blueColor], NSForegroundColorAttributeName,
-                           nil];
+    musicFontAttributes = [NSMutableDictionary dictionaryWithObjectsAndKeys: [NSFont fontWithName:@"Bravura" size:musicFontSize],
+                           NSFontAttributeName, [NSColor blueColor],
+                           NSForegroundColorAttributeName, [NSColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.5],
+                           NSBackgroundColorAttributeName, nil];
     [self setAccidentalWidth];
 }
 
@@ -141,16 +142,23 @@
 
 - (float)clefVerticalAdjustWithClef:(int)clef staffHeight:(float)height
 {
-    float newClefY = (-0.765 * height) + self.musicView_y_center;
+    float newClefY = (-2.31 * height) + self.musicView_y_center;
     switch (clef) {
         case 2:
-            newClefY = (-0.79 * height) + self.musicView_y_center;
+            newClefY = (-1.83 * height) + self.musicView_y_center;
+            NSLog(@"Bass clef");
+            break;
+        case 3:
+            newClefY = (-2.07 * height) + self.musicView_y_center;
+            NSLog(@"Alto clef");
             break;
         case 4:
-            newClefY = (-0.515 * height) + self.musicView_y_center;
+            newClefY = (-1.82 * height) + self.musicView_y_center;
+            NSLog(@"Tenor clef");
             break;
             
         default:
+            NSLog(@"Treble clef");
             break;
     }
     return newClefY;

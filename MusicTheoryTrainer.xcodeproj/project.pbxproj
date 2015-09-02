@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7FC24691B97906A00C6D63A /* Bravura.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7FC24681B97906A00C6D63A /* Bravura.otf */; };
+		D7FC246D1B9792E100C6D63A /* BravuraText.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7FC246C1B9792E100C6D63A /* BravuraText.otf */; };
 		E102C82218DF412F002F6ACF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E102C82118DF412F002F6ACF /* Cocoa.framework */; };
 		E102C82C18DF412F002F6ACF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E102C82A18DF412F002F6ACF /* InfoPlist.strings */; };
 		E102C82E18DF412F002F6ACF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E102C82D18DF412F002F6ACF /* main.m */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D7FC24681B97906A00C6D63A /* Bravura.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bravura.otf; sourceTree = "<group>"; };
+		D7FC246C1B9792E100C6D63A /* BravuraText.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BravuraText.otf; sourceTree = "<group>"; };
 		E102C81E18DF412F002F6ACF /* MusicTheoryTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicTheoryTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E102C82118DF412F002F6ACF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E102C82418DF412F002F6ACF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -103,6 +107,8 @@
 				E102C84818DF412F002F6ACF /* MusicTheoryTrainerTests */,
 				E102C82018DF412F002F6ACF /* Frameworks */,
 				E102C81F18DF412F002F6ACF /* Products */,
+				D7FC24681B97906A00C6D63A /* Bravura.otf */,
+				D7FC246C1B9792E100C6D63A /* BravuraText.otf */,
 			);
 			sourceTree = "<group>";
 		};
@@ -270,8 +276,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E102C82C18DF412F002F6ACF /* InfoPlist.strings in Resources */,
+				D7FC24691B97906A00C6D63A /* Bravura.otf in Resources */,
 				E102C83D18DF412F002F6ACF /* Images.xcassets in Resources */,
 				E102C83218DF412F002F6ACF /* Credits.rtf in Resources */,
+				D7FC246D1B9792E100C6D63A /* BravuraText.otf in Resources */,
 				E102C86818DF41FA002F6ACF /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +513,7 @@
 				E102C85418DF412F002F6ACF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E102C85518DF412F002F6ACF /* Build configuration list for PBXNativeTarget "MusicTheoryTrainerTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +522,7 @@
 				E102C85718DF412F002F6ACF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

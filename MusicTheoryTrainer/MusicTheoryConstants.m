@@ -13,10 +13,10 @@
 
 
 //Unicodes for Music Items
-unichar const TREBLE_CLEF = 0xE060;
-unichar const BASS_CLEF = 0xE06F;
-unichar const ALTO_CLEF = 0xE06B;
-unichar const TENOR_CLEF = 0xE06B;
+unichar const TREBLE_CLEF = 0xE050;
+unichar const BASS_CLEF = 0xE062;
+unichar const ALTO_CLEF = 0xE05C;
+unichar const TENOR_CLEF = 0xE05C;
 
 //unichar const STAFF = 0xE024;
 
