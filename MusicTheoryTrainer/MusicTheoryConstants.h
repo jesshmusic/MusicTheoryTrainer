@@ -17,7 +17,7 @@ extern unichar const BASS_CLEF;
 extern unichar const ALTO_CLEF;
 extern unichar const TENOR_CLEF;
 
-//extern unichar const STAFF;
+extern unichar const STAFF_LINES;
 
 extern unichar const SHARP_SIGN;
 extern unichar const FLAT_SIGN;

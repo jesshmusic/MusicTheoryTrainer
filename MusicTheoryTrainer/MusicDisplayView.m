@@ -108,8 +108,10 @@
               staffHeight:(float)height
             musicFontSize:(float)musicFontSize
 {
+    staffHeight = height;
     [self setTextAttributesWithMusicFontSize:musicFontSize];
     float xStart = self.musicView_x_center - (width/2);
+//    float yStart = 0.0;
     float yStart = self.musicView_y_center - (height/2);
     clefLocation.x = xStart + (xStart * 0.05);
     clefLocation.y = [self clefVerticalAdjustWithClef:clef
@@ -118,17 +120,27 @@
     [self drawClefWithClef:clef];
     [currentKeySignature setCurrentClef:clef];
     
-    float lineWidthAmount = height / 40;
+//    float lineWidthAmount = height / 40;
+    float lineWidthAmount = 1.5;
     staff = [NSBezierPath bezierPath];
     [staff setLineWidth:lineWidthAmount];
     [staff moveToPoint:NSMakePoint(xStart, yStart)];
     [staff lineToPoint:NSMakePoint(xStart, yStart+height)];
     [staff lineToPoint:NSMakePoint(xStart+width, yStart+height)];
+    
+    //  Actual Staff
     [self drawStaffLineWithXStart:xStart xEnd:xStart+width yPoint:yStart+height];
+    NSLog(@"Staff line 1: %f", yStart+height);
     [self drawStaffLineWithXStart:xStart xEnd:xStart+width yPoint:yStart+(height * .75)];
+    NSLog(@"Staff line 2: %f", yStart+(height * .75));
     [self drawStaffLineWithXStart:xStart xEnd:xStart+width yPoint:yStart+(height * .5)];
+    NSLog(@"Staff line 3: %f", yStart+(height * .5));
     [self drawStaffLineWithXStart:xStart xEnd:xStart+width yPoint:yStart+(height * .25)];
+    NSLog(@"Staff line 4: %f", yStart+(height * .25));
     [self drawStaffLineWithXStart:xStart xEnd:xStart+width yPoint:yStart];
+    NSLog(@"Staff line 5: %f", yStart);
+    //  END Actual Staff
+    
     [staff setLineJoinStyle:NSBevelLineJoinStyle];
     [staff setLineCapStyle:NSRoundLineCapStyle];
 }
@@ -142,23 +154,43 @@
 
 - (float)clefVerticalAdjustWithClef:(int)clef staffHeight:(float)height
 {
-    float newClefY = (-2.31 * height) + self.musicView_y_center;
+    NSLog(@"Clef height: %f", [musicObject sizeWithAttributes:musicFontAttributes].height);
+    NSLog(@"Staff height: %f", height);
+   
+    //    float newClefY = (-2.31 * height) + self.musicView_y_center;
+    float spaceBetweenLines = height / 4;
+    float newClefY = self.musicView_y_center - (spaceBetweenLines * 9.3);
+//    NSLog(@"Treble clef offset calc: %f", (-2.31 * height));
+//    float newClefY = -([musicObject sizeWithAttributes:musicFontAttributes].height / 2) + 37.5;
+//    float newClefY = -90;
     switch (clef) {
         case 2:
-            newClefY = (-1.83 * height) + self.musicView_y_center;
-            NSLog(@"Bass clef");
+            // Bass clef
+            NSLog(@"\n\nBass clef");
+//            newClefY = self.musicView_y_center - ([musicObject sizeWithAttributes:musicFontAttributes].height / 2) + spaceBetween
+              newClefY = self.musicView_y_center - (spaceBetweenLines * 7.3);
+//            newClefY = -([musicObject sizeWithAttributes:musicFontAttributes].height / 2) + 37.5;
+            NSLog(@"Clef y: %f", newClefY);
             break;
         case 3:
-            newClefY = (-2.07 * height) + self.musicView_y_center;
-            NSLog(@"Alto clef");
+            // Alto clef
+            NSLog(@"\n\nAlto clef");
+            newClefY = self.musicView_y_center - (spaceBetweenLines * 8.3);
+//            newClefY = -([musicObject sizeWithAttributes:musicFontAttributes].height / 2) + 37.5;
+            NSLog(@"Clef y: %f", newClefY);
             break;
         case 4:
-            newClefY = (-1.82 * height) + self.musicView_y_center;
-            NSLog(@"Tenor clef");
+            // Tenor clef
+            NSLog(@"\n\nTenor clef");
+            newClefY = self.musicView_y_center - (spaceBetweenLines * 7.3);
+//            newClefY = -([musicObject sizeWithAttributes:musicFontAttributes].height / 2) + 37.5;
+            NSLog(@"Clef y: %f", newClefY);
             break;
             
         default:
-            NSLog(@"Treble clef");
+            // Treble clef
+            NSLog(@"\n\nTreble clef");
+            NSLog(@"Clef y: %f", newClefY);
             break;
     }
     return newClefY;

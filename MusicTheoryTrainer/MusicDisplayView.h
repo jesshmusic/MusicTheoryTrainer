@@ -28,7 +28,7 @@
     NSPoint clefLocation;
     NSString *flat;
     NSString *sharp;
-    
+    float staffHeight;
 }
 
 @property KeySignature *currentKeySignature;

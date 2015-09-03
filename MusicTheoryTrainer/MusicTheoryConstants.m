@@ -18,7 +18,7 @@ unichar const BASS_CLEF = 0xE062;
 unichar const ALTO_CLEF = 0xE05C;
 unichar const TENOR_CLEF = 0xE05C;
 
-//unichar const STAFF = 0xE024;
+unichar const STAFF_LINES = 0xE014;
 
 unichar const SHARP_SIGN = 0x266F;
 unichar const FLAT_SIGN = 0x266D;

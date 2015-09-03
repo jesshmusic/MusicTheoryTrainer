@@ -54,11 +54,11 @@ flatWidth, sharpWidth, clefWidth;
 
 - (void)setStaffLines:(float)spaceBetween adjustedStaffHeight:(float)adjustedStaffHeight
 {
-    topLine = adjustedStaffHeight - (spaceBetween);
-    secondLine = adjustedStaffHeight - (spaceBetween * 2);
-    thirdLine = adjustedStaffHeight - (spaceBetween * 3);
-    fourthLine = adjustedStaffHeight - (spaceBetween * 4);
-    bottomLine = adjustedStaffHeight - (spaceBetween * 5);
+    topLine = adjustedStaffHeight - (spaceBetween * 8.3);
+    secondLine = adjustedStaffHeight - (spaceBetween * 9.3);
+    thirdLine = adjustedStaffHeight - (spaceBetween * 10.3);
+    fourthLine = adjustedStaffHeight - (spaceBetween * 11.3);
+    bottomLine = adjustedStaffHeight - (spaceBetween * 12.3);
 }
 
 - (void)setStaffSpaces:(float)spaceBetween

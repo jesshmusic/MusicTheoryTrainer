@@ -54,7 +54,7 @@
                                                    difficulty:self.difficulty
                                                 questionCount:10
                                                    staffWidth:250.0
-                                                  staffHeight:50.0];
+                                                  staffHeight:56.0];
 }
 
 - (IBAction)pullUpMainMenu:(id)sender {
