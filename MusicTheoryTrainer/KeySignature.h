@@ -8,11 +8,13 @@
 
 #import "AppDelegate.h"
 #import "MusicTheoryConstants.h"
+#import "Staff.h"
 
 @interface KeySignature : NSObject
 
 
 @property int currentClef;
+@property Staff *staff;
 
 @property NSString *keySignatureName;
 @property NSPoint firstAccidental;
@@ -25,18 +27,18 @@
 @property BOOL isSharpKey;
 @property int numberOfAccidentals;
 
-@property float topLine;
-@property float secondLine;
-@property float thirdLine;
-@property float fourthLine;
-@property float bottomLine;
-
-@property float topSpace;
-@property float firstSpace;
-@property float secondSpace;
-@property float thirdSpace;
-@property float fourthSpace;
-@property float bottomSpace;
+//@property float topLine;
+//@property float secondLine;
+//@property float thirdLine;
+//@property float fourthLine;
+//@property float bottomLine;
+//
+//@property float topSpace;
+//@property float firstSpace;
+//@property float secondSpace;
+//@property float thirdSpace;
+//@property float fourthSpace;
+//@property float bottomSpace;
 
 @property float afterTheClef;
 

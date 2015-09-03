@@ -9,9 +9,10 @@
 #import "KeySignature.h"
 
 @implementation KeySignature
-@synthesize topLine, secondLine, thirdLine, fourthLine, bottomLine,
-topSpace, firstSpace, secondSpace, thirdSpace, fourthSpace, bottomSpace, afterTheClef,
-flatWidth, sharpWidth, clefWidth;
+@synthesize flatWidth, sharpWidth, clefWidth;
+//@synthesize topLine, secondLine, thirdLine, fourthLine, bottomLine,
+//topSpace, firstSpace, secondSpace, thirdSpace, fourthSpace, bottomSpace, afterTheClef,
+//flatWidth, sharpWidth, clefWidth;
 
 + (id)sharedKeySignature
 {
@@ -39,115 +40,117 @@ flatWidth, sharpWidth, clefWidth;
     flatWidth = fWidth;
     sharpWidth = sWidth;
     clefWidth = cWidth;
-
-    float adjustedStaffHeight = height;
-    float spaceBetween = adjustedStaffHeight/4;
-    float staffBottom = view_y_Center - (adjustedStaffHeight/2);
-    adjustedStaffHeight = adjustedStaffHeight + staffBottom;
-    afterTheClef = view_x_Center - width/2 + (clefWidth + (clefWidth * .4));
     
-    [self setStaffLines:spaceBetween adjustedStaffHeight:adjustedStaffHeight];
+    _staff = [[Staff alloc] initWithWidth:width staffHeight:height view_x_Center:view_x_Center view_y_Center:view_y_Center clefWidth:cWidth];
     
-    [self setStaffSpaces:spaceBetween];
+//    float adjustedStaffHeight = height;
+//    float spaceBetween = adjustedStaffHeight/4;
+//    float staffBottom = view_y_Center - (adjustedStaffHeight/2);
+//    adjustedStaffHeight = adjustedStaffHeight + staffBottom;
+//    afterTheClef = view_x_Center - width/2 + (clefWidth + (clefWidth * .4));
+    
+//    [self setStaffLines:spaceBetween adjustedStaffHeight:adjustedStaffHeight];
+//    
+//    [self setStaffSpaces:spaceBetween];
     
 }
 
-- (void)setStaffLines:(float)spaceBetween adjustedStaffHeight:(float)adjustedStaffHeight
-{
-    topLine = adjustedStaffHeight - (spaceBetween * 8.3);
-    secondLine = adjustedStaffHeight - (spaceBetween * 9.3);
-    thirdLine = adjustedStaffHeight - (spaceBetween * 10.3);
-    fourthLine = adjustedStaffHeight - (spaceBetween * 11.3);
-    bottomLine = adjustedStaffHeight - (spaceBetween * 12.3);
-}
-
-- (void)setStaffSpaces:(float)spaceBetween
-{
-    topSpace = topLine + (spaceBetween * .5);
-    firstSpace = secondLine + (spaceBetween * .5);
-    secondSpace = thirdLine + (spaceBetween * .5);
-    thirdSpace = fourthLine + (spaceBetween * .5);
-    fourthSpace = bottomLine + (spaceBetween * .5);
-    bottomSpace = bottomLine - (spaceBetween * .5);
-}
+//- (void)setStaffLines:(float)spaceBetween adjustedStaffHeight:(float)adjustedStaffHeight
+//{
+//    topLine = adjustedStaffHeight - (spaceBetween * 8.3);
+//    secondLine = adjustedStaffHeight - (spaceBetween * 9.3);
+//    thirdLine = adjustedStaffHeight - (spaceBetween * 10.3);
+//    fourthLine = adjustedStaffHeight - (spaceBetween * 11.3);
+//    bottomLine = adjustedStaffHeight - (spaceBetween * 12.3);
+//}
+//
+//- (void)setStaffSpaces:(float)spaceBetween
+//{
+//    topSpace = topLine + (spaceBetween * .5);
+//    firstSpace = secondLine + (spaceBetween * .5);
+//    secondSpace = thirdLine + (spaceBetween * .5);
+//    thirdSpace = fourthLine + (spaceBetween * .5);
+//    fourthSpace = bottomLine + (spaceBetween * .5);
+//    bottomSpace = bottomLine - (spaceBetween * .5);
+//}
 
 - (void)setSharpKeyPoints
 {
     if (self.currentClef == TREBLE) {
-        self.firstAccidental = NSMakePoint(afterTheClef, topLine);
-        self.secondAccidental = NSMakePoint(afterTheClef + sharpWidth, secondSpace);
-        self.thirdAccidental = NSMakePoint(afterTheClef + (sharpWidth * 2), topSpace);
-        self.fourthAccidental = NSMakePoint(afterTheClef + (sharpWidth * 3), secondLine);
-        self.fifthAccidental = NSMakePoint(afterTheClef + (sharpWidth * 4), thirdSpace);
-        self.sixthAccidental = NSMakePoint(afterTheClef + (sharpWidth * 5), firstSpace);
-        self.seventhAccidental = NSMakePoint(afterTheClef + (sharpWidth * 6), thirdLine);
+        self.firstAccidental = NSMakePoint(_staff.afterTheClef, _staff.topLine);
+        self.secondAccidental = NSMakePoint(_staff.afterTheClef + sharpWidth, _staff.secondSpace);
+        self.thirdAccidental = NSMakePoint(_staff.afterTheClef + (sharpWidth * 2), _staff.topSpace);
+        self.fourthAccidental = NSMakePoint(_staff.afterTheClef + (sharpWidth * 3), _staff.secondLine);
+        self.fifthAccidental = NSMakePoint(_staff.afterTheClef + (sharpWidth * 4), _staff.thirdSpace);
+        self.sixthAccidental = NSMakePoint(_staff.afterTheClef + (sharpWidth * 5), _staff.firstSpace);
+        self.seventhAccidental = NSMakePoint(_staff.afterTheClef + (sharpWidth * 6), _staff.thirdLine);
     }
     else if (self.currentClef == BASS) {
-        self.firstAccidental = NSMakePoint(afterTheClef, secondLine);
-        self.secondAccidental = NSMakePoint(afterTheClef + sharpWidth, thirdSpace);
-        self.thirdAccidental = NSMakePoint(afterTheClef + (sharpWidth * 2), firstSpace);
-        self.fourthAccidental = NSMakePoint(afterTheClef + (sharpWidth * 3), thirdLine);
-        self.fifthAccidental = NSMakePoint(afterTheClef + (sharpWidth * 4), fourthSpace);
-        self.sixthAccidental = NSMakePoint(afterTheClef + (sharpWidth * 5), secondSpace);
-        self.seventhAccidental = NSMakePoint(afterTheClef + (sharpWidth * 6), fourthLine);
+        self.firstAccidental = NSMakePoint(_staff.afterTheClef, _staff.secondLine);
+        self.secondAccidental = NSMakePoint(_staff.afterTheClef + sharpWidth, _staff.thirdSpace);
+        self.thirdAccidental = NSMakePoint(_staff.afterTheClef + (sharpWidth * 2), _staff.firstSpace);
+        self.fourthAccidental = NSMakePoint(_staff.afterTheClef + (sharpWidth * 3), _staff.thirdLine);
+        self.fifthAccidental = NSMakePoint(_staff.afterTheClef + (sharpWidth * 4), _staff.fourthSpace);
+        self.sixthAccidental = NSMakePoint(_staff.afterTheClef + (sharpWidth * 5), _staff.secondSpace);
+        self.seventhAccidental = NSMakePoint(_staff.afterTheClef + (sharpWidth * 6), _staff.fourthLine);
     }
     else if (self.currentClef == ALTO) {
-        self.firstAccidental = NSMakePoint(afterTheClef, firstSpace);
-        self.secondAccidental = NSMakePoint(afterTheClef + sharpWidth, thirdLine);
-        self.thirdAccidental = NSMakePoint(afterTheClef + (sharpWidth * 2), topLine);
-        self.fourthAccidental = NSMakePoint(afterTheClef + (sharpWidth * 3), secondSpace);
-        self.fifthAccidental = NSMakePoint(afterTheClef + (sharpWidth * 4), fourthLine);
-        self.sixthAccidental = NSMakePoint(afterTheClef + (sharpWidth * 5), secondLine);
-        self.seventhAccidental = NSMakePoint(afterTheClef + (sharpWidth * 6), thirdSpace);
+        self.firstAccidental = NSMakePoint(_staff.afterTheClef, _staff.firstSpace);
+        self.secondAccidental = NSMakePoint(_staff.afterTheClef + sharpWidth, _staff.thirdLine);
+        self.thirdAccidental = NSMakePoint(_staff.afterTheClef + (sharpWidth * 2), _staff.topLine);
+        self.fourthAccidental = NSMakePoint(_staff.afterTheClef + (sharpWidth * 3), _staff.secondSpace);
+        self.fifthAccidental = NSMakePoint(_staff.afterTheClef + (sharpWidth * 4), _staff.fourthLine);
+        self.sixthAccidental = NSMakePoint(_staff.afterTheClef + (sharpWidth * 5), _staff.secondLine);
+        self.seventhAccidental = NSMakePoint(_staff.afterTheClef + (sharpWidth * 6), _staff.thirdSpace);
     }
     else {
-        self.firstAccidental = NSMakePoint(afterTheClef, fourthLine);
-        self.secondAccidental = NSMakePoint(afterTheClef + sharpWidth, secondLine);
-        self.thirdAccidental = NSMakePoint(afterTheClef + (sharpWidth * 2), thirdSpace);
-        self.fourthAccidental = NSMakePoint(afterTheClef + (sharpWidth * 3), firstSpace);
-        self.fifthAccidental = NSMakePoint(afterTheClef + (sharpWidth * 4), thirdLine);
-        self.sixthAccidental = NSMakePoint(afterTheClef + (sharpWidth * 5), topLine);
-        self.seventhAccidental = NSMakePoint(afterTheClef + (sharpWidth * 6), secondSpace);
+        self.firstAccidental = NSMakePoint(_staff.afterTheClef, _staff.fourthLine);
+        self.secondAccidental = NSMakePoint(_staff.afterTheClef + sharpWidth, _staff.secondLine);
+        self.thirdAccidental = NSMakePoint(_staff.afterTheClef + (sharpWidth * 2), _staff.thirdSpace);
+        self.fourthAccidental = NSMakePoint(_staff.afterTheClef + (sharpWidth * 3), _staff.firstSpace);
+        self.fifthAccidental = NSMakePoint(_staff.afterTheClef + (sharpWidth * 4), _staff.thirdLine);
+        self.sixthAccidental = NSMakePoint(_staff.afterTheClef + (sharpWidth * 5), _staff.topLine);
+        self.seventhAccidental = NSMakePoint(_staff.afterTheClef + (sharpWidth * 6), _staff.secondSpace);
     }
 }
 
 - (void)setFlatKeyPoints
 {
     if (self.currentClef == TREBLE) {
-        self.firstAccidental = NSMakePoint(afterTheClef, thirdLine);
-        self.secondAccidental = NSMakePoint(afterTheClef + flatWidth, firstSpace);
-        self.thirdAccidental = NSMakePoint(afterTheClef + (flatWidth * 2), thirdSpace);
-        self.fourthAccidental = NSMakePoint(afterTheClef + (flatWidth * 3), secondLine);
-        self.fifthAccidental = NSMakePoint(afterTheClef + (flatWidth * 4), fourthLine);
-        self.sixthAccidental = NSMakePoint(afterTheClef + (flatWidth * 5), secondSpace);
-        self.seventhAccidental = NSMakePoint(afterTheClef + (flatWidth * 6), fourthSpace);
+        self.firstAccidental = NSMakePoint(_staff.afterTheClef, _staff.thirdLine);
+        self.secondAccidental = NSMakePoint(_staff.afterTheClef + flatWidth, _staff.firstSpace);
+        self.thirdAccidental = NSMakePoint(_staff.afterTheClef + (flatWidth * 2), _staff.thirdSpace);
+        self.fourthAccidental = NSMakePoint(_staff.afterTheClef + (flatWidth * 3), _staff.secondLine);
+        self.fifthAccidental = NSMakePoint(_staff.afterTheClef + (flatWidth * 4), _staff.fourthLine);
+        self.sixthAccidental = NSMakePoint(_staff.afterTheClef + (flatWidth * 5), _staff.secondSpace);
+        self.seventhAccidental = NSMakePoint(_staff.afterTheClef + (flatWidth * 6), _staff.fourthSpace);
     }
     else if (self.currentClef == BASS) {
-        self.firstAccidental = NSMakePoint(afterTheClef, fourthLine);
-        self.secondAccidental = NSMakePoint(afterTheClef + flatWidth, secondSpace);
-        self.thirdAccidental = NSMakePoint(afterTheClef + (flatWidth * 2), fourthSpace);
-        self.fourthAccidental = NSMakePoint(afterTheClef + (flatWidth * 3), thirdLine);
-        self.fifthAccidental = NSMakePoint(afterTheClef + (flatWidth * 4), bottomLine);
-        self.sixthAccidental = NSMakePoint(afterTheClef + (flatWidth * 5), thirdSpace);
-        self.seventhAccidental = NSMakePoint(afterTheClef + (flatWidth * 6), bottomSpace);
+        self.firstAccidental = NSMakePoint(_staff.afterTheClef, _staff.fourthLine);
+        self.secondAccidental = NSMakePoint(_staff.afterTheClef + flatWidth, _staff.secondSpace);
+        self.thirdAccidental = NSMakePoint(_staff.afterTheClef + (flatWidth * 2), _staff.fourthSpace);
+        self.fourthAccidental = NSMakePoint(_staff.afterTheClef + (flatWidth * 3), _staff.thirdLine);
+        self.fifthAccidental = NSMakePoint(_staff.afterTheClef + (flatWidth * 4), _staff.bottomLine);
+        self.sixthAccidental = NSMakePoint(_staff.afterTheClef + (flatWidth * 5), _staff.thirdSpace);
+        self.seventhAccidental = NSMakePoint(_staff.afterTheClef + (flatWidth * 6), _staff.bottomSpace);
     }
     else if (self.currentClef == ALTO) {
-        self.firstAccidental = NSMakePoint(afterTheClef, thirdSpace);
-        self.secondAccidental = NSMakePoint(afterTheClef + flatWidth, secondLine);
-        self.thirdAccidental = NSMakePoint(afterTheClef + (flatWidth * 2), fourthLine);
-        self.fourthAccidental = NSMakePoint(afterTheClef + (flatWidth * 3), secondSpace);
-        self.fifthAccidental = NSMakePoint(afterTheClef + (flatWidth * 4), fourthSpace);
-        self.sixthAccidental = NSMakePoint(afterTheClef + (flatWidth * 5), thirdLine);
-        self.seventhAccidental = NSMakePoint(afterTheClef + (flatWidth * 6), bottomLine);
+        self.firstAccidental = NSMakePoint(_staff.afterTheClef, _staff.thirdSpace);
+        self.secondAccidental = NSMakePoint(_staff.afterTheClef + flatWidth, _staff.secondLine);
+        self.thirdAccidental = NSMakePoint(_staff.afterTheClef + (flatWidth * 2), _staff.fourthLine);
+        self.fourthAccidental = NSMakePoint(_staff.afterTheClef + (flatWidth * 3), _staff.secondSpace);
+        self.fifthAccidental = NSMakePoint(_staff.afterTheClef + (flatWidth * 4), _staff.fourthSpace);
+        self.sixthAccidental = NSMakePoint(_staff.afterTheClef + (flatWidth * 5), _staff.thirdLine);
+        self.seventhAccidental = NSMakePoint(_staff.afterTheClef + (flatWidth * 6), _staff.bottomLine);
     }
     else {
-        self.firstAccidental = NSMakePoint(afterTheClef, secondSpace);
-        self.secondAccidental = NSMakePoint(afterTheClef + flatWidth, topLine);
-        self.thirdAccidental = NSMakePoint(afterTheClef + (flatWidth * 2), thirdLine);
-        self.fourthAccidental = NSMakePoint(afterTheClef + (flatWidth * 3), firstSpace);
-        self.fifthAccidental = NSMakePoint(afterTheClef + (flatWidth * 4), thirdSpace);
-        self.sixthAccidental = NSMakePoint(afterTheClef + (flatWidth * 5), secondLine);
-        self.seventhAccidental = NSMakePoint(afterTheClef + (flatWidth * 6), fourthLine);
+        self.firstAccidental = NSMakePoint(_staff.afterTheClef, _staff.secondSpace);
+        self.secondAccidental = NSMakePoint(_staff.afterTheClef + flatWidth, _staff.topLine);
+        self.thirdAccidental = NSMakePoint(_staff.afterTheClef + (flatWidth * 2), _staff.thirdLine);
+        self.fourthAccidental = NSMakePoint(_staff.afterTheClef + (flatWidth * 3), _staff.firstSpace);
+        self.fifthAccidental = NSMakePoint(_staff.afterTheClef + (flatWidth * 4), _staff.thirdSpace);
+        self.sixthAccidental = NSMakePoint(_staff.afterTheClef + (flatWidth * 5), _staff.secondLine);
+        self.seventhAccidental = NSMakePoint(_staff.afterTheClef + (flatWidth * 6), _staff.fourthLine);
     }
 }
 

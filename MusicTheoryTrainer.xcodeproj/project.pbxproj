@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D773B9EF1B98F6440001D0E5 /* Staff.m in Sources */ = {isa = PBXBuildFile; fileRef = D773B9EE1B98F6440001D0E5 /* Staff.m */; };
 		D7FC24691B97906A00C6D63A /* Bravura.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7FC24681B97906A00C6D63A /* Bravura.otf */; };
 		D7FC246D1B9792E100C6D63A /* BravuraText.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7FC246C1B9792E100C6D63A /* BravuraText.otf */; };
 		E102C82218DF412F002F6ACF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E102C82118DF412F002F6ACF /* Cocoa.framework */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D773B9ED1B98F6440001D0E5 /* Staff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Staff.h; sourceTree = "<group>"; };
+		D773B9EE1B98F6440001D0E5 /* Staff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Staff.m; sourceTree = "<group>"; };
 		D7FC24681B97906A00C6D63A /* Bravura.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bravura.otf; sourceTree = "<group>"; };
 		D7FC246C1B9792E100C6D63A /* BravuraText.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BravuraText.otf; sourceTree = "<group>"; };
 		E102C81E18DF412F002F6ACF /* MusicTheoryTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicTheoryTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +157,8 @@
 				E102C85B18DF41D0002F6ACF /* KeySigIdentification.m */,
 				E102C85C18DF41D0002F6ACF /* KeySigAndClef.h */,
 				E102C85D18DF41D0002F6ACF /* KeySigAndClef.m */,
+				D773B9ED1B98F6440001D0E5 /* Staff.h */,
+				D773B9EE1B98F6440001D0E5 /* Staff.m */,
 				E102C85E18DF41D0002F6ACF /* MusicDisplayView.h */,
 				E102C85F18DF41D0002F6ACF /* MusicDisplayView.m */,
 				E102C86018DF41D0002F6ACF /* MusicTheoryConstants.h */,
@@ -302,6 +307,7 @@
 				E102C86218DF41D0002F6ACF /* KeySignature.m in Sources */,
 				E102C8B718DF96C6002F6ACF /* KeySigGameController.m in Sources */,
 				E102C83518DF412F002F6ACF /* AppDelegate.m in Sources */,
+				D773B9EF1B98F6440001D0E5 /* Staff.m in Sources */,
 				E102C86E18DF43A3002F6ACF /* User.m in Sources */,
 				E102C83B18DF412F002F6ACF /* MusicTheoryTrainer.xcdatamodeld in Sources */,
 				E102C82E18DF412F002F6ACF /* main.m in Sources */,
