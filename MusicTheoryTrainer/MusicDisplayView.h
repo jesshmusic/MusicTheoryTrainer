@@ -10,14 +10,16 @@
 //#import "JHMusicConstants.h"
 #import "KeySignature.h"
 
+@class Staff;
+
 @interface MusicDisplayView : NSView
 {
     
-    NSBezierPath *staff;
-    
+    NSBezierPath *staffBezierPath;
+    Staff *currentStaff;
     //Text Attribute Dictionarys
-    NSMutableDictionary *attributes;
-    NSMutableDictionary *musicFontAttributes;
+//    NSMutableDictionary *textFontAttributes;
+//    NSMutableDictionary *musicFontAttributes;
     
 //    NSView *musicViewWindow;
 
@@ -25,10 +27,9 @@
     //Staff Size and Notation Placement Variables
 
     NSString *musicObject;
-    NSPoint clefLocation;
     NSString *flat;
     NSString *sharp;
-    float staffHeight;
+//    float staffHeight;
 }
 
 @property KeySignature *currentKeySignature;
@@ -42,8 +43,6 @@
 
 
 - (void)drawStaffWithClef:(int)clef
-               staffWidth:(float)width
-              staffHeight:(float)height
-            musicFontSize:(float)musicFontSize;
+                    staff:(Staff*)newStaff;
 
 @end

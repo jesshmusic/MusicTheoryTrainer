@@ -7,28 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D773B9EF1B98F6440001D0E5 /* Staff.m in Sources */ = {isa = PBXBuildFile; fileRef = D773B9EE1B98F6440001D0E5 /* Staff.m */; };
+		D7B4997D1B9B85570016676B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7B4997C1B9B85570016676B /* Main.storyboard */; };
+		D7B499801B9B85890016676B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B4997F1B9B85890016676B /* AppDelegate.m */; };
+		D7B499931B9B85AD0016676B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B499821B9B85AD0016676B /* ViewController.m */; };
+		D7B499941B9B85AD0016676B /* MTTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B499841B9B85AD0016676B /* MTTViewController.m */; };
+		D7B499951B9B85AD0016676B /* KeySigGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B499861B9B85AD0016676B /* KeySigGameController.m */; };
+		D7B499961B9B85AD0016676B /* KeySigIdentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B499881B9B85AD0016676B /* KeySigIdentViewController.m */; };
+		D7B499971B9B85AD0016676B /* KeySigAndClef.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B4998A1B9B85AD0016676B /* KeySigAndClef.m */; };
+		D7B499981B9B85AD0016676B /* KeySignature.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B4998C1B9B85AD0016676B /* KeySignature.m */; };
+		D7B499991B9B85AD0016676B /* Staff.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B4998E1B9B85AD0016676B /* Staff.m */; };
+		D7B4999A1B9B85AD0016676B /* MusicDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B499901B9B85AD0016676B /* MusicDisplayView.m */; };
+		D7B4999B1B9B85AD0016676B /* MusicTheoryConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B499921B9B85AD0016676B /* MusicTheoryConstants.m */; };
 		D7FC24691B97906A00C6D63A /* Bravura.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7FC24681B97906A00C6D63A /* Bravura.otf */; };
 		D7FC246D1B9792E100C6D63A /* BravuraText.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7FC246C1B9792E100C6D63A /* BravuraText.otf */; };
 		E102C82218DF412F002F6ACF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E102C82118DF412F002F6ACF /* Cocoa.framework */; };
 		E102C82C18DF412F002F6ACF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E102C82A18DF412F002F6ACF /* InfoPlist.strings */; };
 		E102C82E18DF412F002F6ACF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E102C82D18DF412F002F6ACF /* main.m */; };
 		E102C83218DF412F002F6ACF /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E102C83018DF412F002F6ACF /* Credits.rtf */; };
-		E102C83518DF412F002F6ACF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E102C83418DF412F002F6ACF /* AppDelegate.m */; };
 		E102C83B18DF412F002F6ACF /* MusicTheoryTrainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E102C83918DF412F002F6ACF /* MusicTheoryTrainer.xcdatamodeld */; };
 		E102C83D18DF412F002F6ACF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E102C83C18DF412F002F6ACF /* Images.xcassets */; };
 		E102C84418DF412F002F6ACF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E102C84318DF412F002F6ACF /* XCTest.framework */; };
 		E102C84518DF412F002F6ACF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E102C82118DF412F002F6ACF /* Cocoa.framework */; };
 		E102C84D18DF412F002F6ACF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E102C84B18DF412F002F6ACF /* InfoPlist.strings */; };
 		E102C84F18DF412F002F6ACF /* MusicTheoryTrainerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E102C84E18DF412F002F6ACF /* MusicTheoryTrainerTests.m */; };
-		E102C86218DF41D0002F6ACF /* KeySignature.m in Sources */ = {isa = PBXBuildFile; fileRef = E102C85918DF41D0002F6ACF /* KeySignature.m */; };
-		E102C86318DF41D0002F6ACF /* KeySigIdentification.m in Sources */ = {isa = PBXBuildFile; fileRef = E102C85B18DF41D0002F6ACF /* KeySigIdentification.m */; };
-		E102C86418DF41D0002F6ACF /* KeySigAndClef.m in Sources */ = {isa = PBXBuildFile; fileRef = E102C85D18DF41D0002F6ACF /* KeySigAndClef.m */; };
-		E102C86518DF41D0002F6ACF /* MusicDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = E102C85F18DF41D0002F6ACF /* MusicDisplayView.m */; };
-		E102C86618DF41D0002F6ACF /* MusicTheoryConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E102C86118DF41D0002F6ACF /* MusicTheoryConstants.m */; };
-		E102C86818DF41FA002F6ACF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E102C86718DF41FA002F6ACF /* MainMenu.xib */; };
 		E102C86E18DF43A3002F6ACF /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E102C86D18DF43A3002F6ACF /* User.m */; };
-		E102C8B718DF96C6002F6ACF /* KeySigGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = E102C8B618DF96C6002F6ACF /* KeySigGameController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +44,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D773B9ED1B98F6440001D0E5 /* Staff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Staff.h; sourceTree = "<group>"; };
-		D773B9EE1B98F6440001D0E5 /* Staff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Staff.m; sourceTree = "<group>"; };
+		D7B4997C1B9B85570016676B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D7B4997E1B9B85890016676B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D7B4997F1B9B85890016676B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D7B499811B9B85AD0016676B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D7B499821B9B85AD0016676B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D7B499831B9B85AD0016676B /* MTTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTViewController.h; sourceTree = "<group>"; };
+		D7B499841B9B85AD0016676B /* MTTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTViewController.m; sourceTree = "<group>"; };
+		D7B499851B9B85AD0016676B /* KeySigGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeySigGameController.h; sourceTree = "<group>"; };
+		D7B499861B9B85AD0016676B /* KeySigGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeySigGameController.m; sourceTree = "<group>"; };
+		D7B499871B9B85AD0016676B /* KeySigIdentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeySigIdentViewController.h; sourceTree = "<group>"; };
+		D7B499881B9B85AD0016676B /* KeySigIdentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeySigIdentViewController.m; sourceTree = "<group>"; };
+		D7B499891B9B85AD0016676B /* KeySigAndClef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeySigAndClef.h; sourceTree = "<group>"; };
+		D7B4998A1B9B85AD0016676B /* KeySigAndClef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeySigAndClef.m; sourceTree = "<group>"; };
+		D7B4998B1B9B85AD0016676B /* KeySignature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeySignature.h; sourceTree = "<group>"; };
+		D7B4998C1B9B85AD0016676B /* KeySignature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeySignature.m; sourceTree = "<group>"; };
+		D7B4998D1B9B85AD0016676B /* Staff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Staff.h; sourceTree = "<group>"; };
+		D7B4998E1B9B85AD0016676B /* Staff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Staff.m; sourceTree = "<group>"; };
+		D7B4998F1B9B85AD0016676B /* MusicDisplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicDisplayView.h; sourceTree = "<group>"; };
+		D7B499901B9B85AD0016676B /* MusicDisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicDisplayView.m; sourceTree = "<group>"; };
+		D7B499911B9B85AD0016676B /* MusicTheoryConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicTheoryConstants.h; sourceTree = "<group>"; };
+		D7B499921B9B85AD0016676B /* MusicTheoryConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicTheoryConstants.m; sourceTree = "<group>"; };
 		D7FC24681B97906A00C6D63A /* Bravura.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bravura.otf; sourceTree = "<group>"; };
 		D7FC246C1B9792E100C6D63A /* BravuraText.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BravuraText.otf; sourceTree = "<group>"; };
 		E102C81E18DF412F002F6ACF /* MusicTheoryTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicTheoryTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,8 +77,6 @@
 		E102C82D18DF412F002F6ACF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E102C82F18DF412F002F6ACF /* MusicTheoryTrainer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicTheoryTrainer-Prefix.pch"; sourceTree = "<group>"; };
 		E102C83118DF412F002F6ACF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		E102C83318DF412F002F6ACF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E102C83418DF412F002F6ACF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E102C83A18DF412F002F6ACF /* MusicTheoryTrainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MusicTheoryTrainer.xcdatamodel; sourceTree = "<group>"; };
 		E102C83C18DF412F002F6ACF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E102C84218DF412F002F6ACF /* MusicTheoryTrainerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicTheoryTrainerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,21 +84,8 @@
 		E102C84A18DF412F002F6ACF /* MusicTheoryTrainerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MusicTheoryTrainerTests-Info.plist"; sourceTree = "<group>"; };
 		E102C84C18DF412F002F6ACF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E102C84E18DF412F002F6ACF /* MusicTheoryTrainerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicTheoryTrainerTests.m; sourceTree = "<group>"; };
-		E102C85818DF41D0002F6ACF /* KeySignature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeySignature.h; sourceTree = "<group>"; };
-		E102C85918DF41D0002F6ACF /* KeySignature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeySignature.m; sourceTree = "<group>"; };
-		E102C85A18DF41D0002F6ACF /* KeySigIdentification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeySigIdentification.h; sourceTree = "<group>"; };
-		E102C85B18DF41D0002F6ACF /* KeySigIdentification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeySigIdentification.m; sourceTree = "<group>"; };
-		E102C85C18DF41D0002F6ACF /* KeySigAndClef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeySigAndClef.h; sourceTree = "<group>"; };
-		E102C85D18DF41D0002F6ACF /* KeySigAndClef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeySigAndClef.m; sourceTree = "<group>"; };
-		E102C85E18DF41D0002F6ACF /* MusicDisplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicDisplayView.h; sourceTree = "<group>"; };
-		E102C85F18DF41D0002F6ACF /* MusicDisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicDisplayView.m; sourceTree = "<group>"; };
-		E102C86018DF41D0002F6ACF /* MusicTheoryConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicTheoryConstants.h; sourceTree = "<group>"; };
-		E102C86118DF41D0002F6ACF /* MusicTheoryConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicTheoryConstants.m; sourceTree = "<group>"; };
-		E102C86718DF41FA002F6ACF /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		E102C86C18DF43A3002F6ACF /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		E102C86D18DF43A3002F6ACF /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		E102C8B518DF96C6002F6ACF /* KeySigGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeySigGameController.h; sourceTree = "<group>"; };
-		E102C8B618DF96C6002F6ACF /* KeySigGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeySigGameController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,23 +153,27 @@
 		E102C82718DF412F002F6ACF /* MusicTheoryTrainer */ = {
 			isa = PBXGroup;
 			children = (
-				E102C83318DF412F002F6ACF /* AppDelegate.h */,
-				E102C83418DF412F002F6ACF /* AppDelegate.m */,
-				E102C8B518DF96C6002F6ACF /* KeySigGameController.h */,
-				E102C8B618DF96C6002F6ACF /* KeySigGameController.m */,
-				E102C85818DF41D0002F6ACF /* KeySignature.h */,
-				E102C85918DF41D0002F6ACF /* KeySignature.m */,
-				E102C85A18DF41D0002F6ACF /* KeySigIdentification.h */,
-				E102C85B18DF41D0002F6ACF /* KeySigIdentification.m */,
-				E102C85C18DF41D0002F6ACF /* KeySigAndClef.h */,
-				E102C85D18DF41D0002F6ACF /* KeySigAndClef.m */,
-				D773B9ED1B98F6440001D0E5 /* Staff.h */,
-				D773B9EE1B98F6440001D0E5 /* Staff.m */,
-				E102C85E18DF41D0002F6ACF /* MusicDisplayView.h */,
-				E102C85F18DF41D0002F6ACF /* MusicDisplayView.m */,
-				E102C86018DF41D0002F6ACF /* MusicTheoryConstants.h */,
-				E102C86118DF41D0002F6ACF /* MusicTheoryConstants.m */,
-				E102C86718DF41FA002F6ACF /* MainMenu.xib */,
+				D7B4997E1B9B85890016676B /* AppDelegate.h */,
+				D7B4997F1B9B85890016676B /* AppDelegate.m */,
+				D7B499811B9B85AD0016676B /* ViewController.h */,
+				D7B499821B9B85AD0016676B /* ViewController.m */,
+				D7B499831B9B85AD0016676B /* MTTViewController.h */,
+				D7B499841B9B85AD0016676B /* MTTViewController.m */,
+				D7B499851B9B85AD0016676B /* KeySigGameController.h */,
+				D7B499861B9B85AD0016676B /* KeySigGameController.m */,
+				D7B499871B9B85AD0016676B /* KeySigIdentViewController.h */,
+				D7B499881B9B85AD0016676B /* KeySigIdentViewController.m */,
+				D7B499891B9B85AD0016676B /* KeySigAndClef.h */,
+				D7B4998A1B9B85AD0016676B /* KeySigAndClef.m */,
+				D7B4998B1B9B85AD0016676B /* KeySignature.h */,
+				D7B4998C1B9B85AD0016676B /* KeySignature.m */,
+				D7B4998D1B9B85AD0016676B /* Staff.h */,
+				D7B4998E1B9B85AD0016676B /* Staff.m */,
+				D7B4998F1B9B85AD0016676B /* MusicDisplayView.h */,
+				D7B499901B9B85AD0016676B /* MusicDisplayView.m */,
+				D7B499911B9B85AD0016676B /* MusicTheoryConstants.h */,
+				D7B499921B9B85AD0016676B /* MusicTheoryConstants.m */,
+				D7B4997C1B9B85570016676B /* Main.storyboard */,
 				E102C83C18DF412F002F6ACF /* Images.xcassets */,
 				E102C83918DF412F002F6ACF /* MusicTheoryTrainer.xcdatamodeld */,
 				E102C86C18DF43A3002F6ACF /* User.h */,
@@ -280,12 +290,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7B4997D1B9B85570016676B /* Main.storyboard in Resources */,
 				E102C82C18DF412F002F6ACF /* InfoPlist.strings in Resources */,
 				D7FC24691B97906A00C6D63A /* Bravura.otf in Resources */,
 				E102C83D18DF412F002F6ACF /* Images.xcassets in Resources */,
 				E102C83218DF412F002F6ACF /* Credits.rtf in Resources */,
 				D7FC246D1B9792E100C6D63A /* BravuraText.otf in Resources */,
-				E102C86818DF41FA002F6ACF /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,17 +314,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E102C86218DF41D0002F6ACF /* KeySignature.m in Sources */,
-				E102C8B718DF96C6002F6ACF /* KeySigGameController.m in Sources */,
-				E102C83518DF412F002F6ACF /* AppDelegate.m in Sources */,
-				D773B9EF1B98F6440001D0E5 /* Staff.m in Sources */,
+				D7B499801B9B85890016676B /* AppDelegate.m in Sources */,
 				E102C86E18DF43A3002F6ACF /* User.m in Sources */,
+				D7B499971B9B85AD0016676B /* KeySigAndClef.m in Sources */,
+				D7B4999A1B9B85AD0016676B /* MusicDisplayView.m in Sources */,
+				D7B499991B9B85AD0016676B /* Staff.m in Sources */,
 				E102C83B18DF412F002F6ACF /* MusicTheoryTrainer.xcdatamodeld in Sources */,
+				D7B499951B9B85AD0016676B /* KeySigGameController.m in Sources */,
 				E102C82E18DF412F002F6ACF /* main.m in Sources */,
-				E102C86318DF41D0002F6ACF /* KeySigIdentification.m in Sources */,
-				E102C86618DF41D0002F6ACF /* MusicTheoryConstants.m in Sources */,
-				E102C86418DF41D0002F6ACF /* KeySigAndClef.m in Sources */,
-				E102C86518DF41D0002F6ACF /* MusicDisplayView.m in Sources */,
+				D7B499981B9B85AD0016676B /* KeySignature.m in Sources */,
+				D7B499961B9B85AD0016676B /* KeySigIdentViewController.m in Sources */,
+				D7B499941B9B85AD0016676B /* MTTViewController.m in Sources */,
+				D7B4999B1B9B85AD0016676B /* MusicTheoryConstants.m in Sources */,
+				D7B499931B9B85AD0016676B /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
