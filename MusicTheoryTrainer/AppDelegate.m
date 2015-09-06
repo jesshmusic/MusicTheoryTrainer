@@ -33,7 +33,7 @@
 - (NSURL *)applicationDocumentsDirectory {
     // The directory the application uses to store the Core Data store file. This code uses a directory named "com.ExistentialMusic.MusicTheoryDrills" in the user's Application Support directory.
     NSURL *appSupportURL = [[[NSFileManager defaultManager] URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject];
-    return [appSupportURL URLByAppendingPathComponent:@"com.ExistentialMusic.MusicTheoryDrills"];
+    return [appSupportURL URLByAppendingPathComponent:@"com.ExistentialMusic.MusicTheoryTrainer"];
 }
 
 - (NSManagedObjectModel *)managedObjectModel {
@@ -42,7 +42,7 @@
         return _managedObjectModel;
     }
 	
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"MusicTheoryDrills" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"MusicTheoryTrainer" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }

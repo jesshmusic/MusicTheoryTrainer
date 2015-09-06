@@ -14,17 +14,16 @@
 @implementation MusicDisplayView
 @synthesize currentKeySignature;
 
-- (id)init
+- (void)setupMusicObjects
 {
     flat = [NSString stringWithFormat:@"%C", FLAT_SIGN];
     sharp = [NSString stringWithFormat:@"%C", SHARP_SIGN];
-    return self;
 }
-
 
 - (void)drawKeySignatureWithNumberAccidentals:(int)numberAccidentals
                                    isSharpKey:(BOOL)isSharpKey
 {
+    
     if (isSharpKey) {
         if (numberAccidentals >= 1) {
             [sharp drawAtPoint:currentStaff.firstAccidental withAttributes:currentStaff.musicFontAttributes];

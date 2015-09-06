@@ -40,7 +40,7 @@
 @property float clefWidth;
 
 
-
+- (void)setupMusicObjects;
 
 - (void)drawStaffWithClef:(int)clef
                     staff:(Staff*)newStaff;

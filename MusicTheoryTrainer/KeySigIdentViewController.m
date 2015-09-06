@@ -19,7 +19,7 @@
 @end
 
 @implementation KeySigIdentViewController
-//@synthesize currentKeySignature;
+@synthesize currentUser, managedObjectContext;
 
 - (void)viewDidLoad
 {
@@ -29,15 +29,8 @@
     [self.mainButton setTitle:@"Start Quiz"];
     [self.answerField setEnabled:false];
     keySigGame = [[KeySigGameController alloc] initWithDifficultyLevel:self.difficultyLevel numberOfQuestions:self.numberOfQuestions];
-    
-    //  TESTING
-    //    [self setCurrentClef:3];
-    //    [self setCurrentKeySignature:[KeySignature sharedKeySignature]];
-    //    [currentKeySignature setNewKeySignature:@"C"];
-    //    [self addStaffWithClef:self.currentClef staffWidth:900 staffHeight:80.0 x:26 y:132.0];
+    [self.mainMusicView setupMusicObjects];
 }
-
-
 
 - (IBAction)submitAnswer:(id)sender
 {
@@ -63,6 +56,7 @@
                 [self.answerField setStringValue:@""];
                 [self.answerField setEnabled:false];
                 [self.scoreDisplay setStringValue: [NSString stringWithFormat:@"%i", keySigGame.currentScore]];
+                [self calculateUserXP];
             }
             [self.mainButton becomeFirstResponder];
         } else {
@@ -78,6 +72,7 @@
                 [self.answerField setStringValue:@""];
                 [self.answerField setEnabled:false];
                 [self.scoreDisplay setStringValue: [NSString stringWithFormat:@"%i", keySigGame.currentScore]];
+                [self calculateUserXP];
             }
             [self.mainButton becomeFirstResponder];
         }
@@ -96,6 +91,20 @@
 }
 
 
+- (void)calculateUserXP
+{
+    int currentUserXP = [currentUser.xp intValue];
+    currentUserXP += keySigGame.currentScore;
+    [currentUser setXp:[NSNumber numberWithInt:currentUserXP]];
+    [currentUser checkLevel];
+    NSError *error = nil;
+    if ([self.managedObjectContext save:&error] == NO)
+    {
+        NSAssert(NO, @"Error saving context: %@\n%@", [error localizedDescription], [error userInfo]);
+    }
+    NSLog(@"%@ xp: %@", currentUser.name, currentUser.xp);
+}
+
 - (void)addStaffWithClef:(int)clef
               staffWidth:(float)width
              staffHeight:(float)height
@@ -103,70 +112,7 @@
                        y:(float)yStart
 {
     Staff *newStaff = [[Staff alloc] initWithWidth:width height:height xStart:xStart yStart:yStart keySignature:keySigGame.currentKey clef:clef];
-    //    NSLog(@"%@", newStaff.description);
     [self.mainMusicView drawStaffWithClef:clef staff:newStaff];
 }
-
-
-
-// For TESTING:
-//- (IBAction)changeClef:(id)sender
-//{
-//    switch (_currentClef) {
-//        case 1:
-//            [self setCurrentClef:2];
-//            break;
-//        case 2:
-//            [self setCurrentClef:3];
-//            break;
-//        case 3:
-//            [self setCurrentClef:4];
-//            break;
-//        case 4:
-//            [self setCurrentClef:1];
-//            break;
-//
-//        default:
-//            break;
-//    }
-//    [self addStaffWithClef:self.currentClef staffWidth:900 staffHeight:80.0 x:26 y:132.0];
-//}
-//
-//- (IBAction)changeKey:(id)sender {
-//    NSString *newKeyName = currentKeySignature.keySignatureName;
-//    if ([currentKeySignature.keySignatureName isEqualToString:@"C"]) {
-//        newKeyName = @"G";
-//    } else if ([currentKeySignature.keySignatureName isEqualToString:@"G"]) {
-//        newKeyName = @"D";
-//    } else if ([currentKeySignature.keySignatureName isEqualToString:@"D"]) {
-//        newKeyName = @"A";
-//    } else if ([currentKeySignature.keySignatureName isEqualToString:@"A"]) {
-//        newKeyName = @"E";
-//    } else if ([currentKeySignature.keySignatureName isEqualToString:@"E"]) {
-//        newKeyName = @"B";
-//    } else if ([currentKeySignature.keySignatureName isEqualToString:@"B"]) {
-//        newKeyName = @"F#";
-//    } else if ([currentKeySignature.keySignatureName isEqualToString:@"F#"]) {
-//        newKeyName = @"C#";
-//    } else if ([currentKeySignature.keySignatureName isEqualToString:@"C#"]) {
-//        newKeyName = @"Cb";
-//    } else if ([currentKeySignature.keySignatureName isEqualToString:@"Cb"]) {
-//        newKeyName = @"Gb";
-//    } else if ([currentKeySignature.keySignatureName isEqualToString:@"Gb"]) {
-//        newKeyName = @"Db";
-//    } else if ([currentKeySignature.keySignatureName isEqualToString:@"Db"]) {
-//        newKeyName = @"Ab";
-//    } else if ([currentKeySignature.keySignatureName isEqualToString:@"Ab"]) {
-//        newKeyName = @"Eb";
-//    } else if ([currentKeySignature.keySignatureName isEqualToString:@"Eb"]) {
-//        newKeyName = @"Bb";
-//    } else if ([currentKeySignature.keySignatureName isEqualToString:@"Bb"]) {
-//        newKeyName = @"F";
-//    } else if ([currentKeySignature.keySignatureName isEqualToString:@"F"]) {
-//        newKeyName = @"C";
-//    }
-//    [currentKeySignature setNewKeySignature:newKeyName];
-//    [self addStaffWithClef:self.currentClef staffWidth:900 staffHeight:80.0 x:26 y:132.0];
-//}
 
 @end

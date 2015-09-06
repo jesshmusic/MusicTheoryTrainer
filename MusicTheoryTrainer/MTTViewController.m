@@ -19,13 +19,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     AppDelegate *delegate = (AppDelegate *) [[NSApplication sharedApplication] delegate];
-//    self.managedObjectContext = delegate.managedObjectContext;
+    self.managedObjectContext = delegate.managedObjectContext;
     difficultyLevel = [self.difficultySlider doubleValue];
+    currentUser = [[self.mttUserArrayCtrl selectedObjects] firstObject];
+    if (currentUser == nil) {
+        self.keySigGameButton.enabled = false;
+    }
 }
 
 - (IBAction)setDifficulty:(id)sender
 {
     difficultyLevel = [self.difficultySlider doubleValue];
+}
+
+- (IBAction)tableViewClicked:(id)sender {
+    currentUser = [[self.mttUserArrayCtrl selectedObjects] firstObject];
+    if (currentUser != nil) {
+        self.keySigGameButton.enabled = true;
+    }
 }
 
 -(void)prepareForSegue:(NSStoryboardSegue *)segue sender:(id)sender
@@ -34,7 +45,8 @@
         KeySigIdentViewController *keySigGameView = [segue destinationController];
         keySigGameView.difficultyLevel = difficultyLevel;
         keySigGameView.numberOfQuestions = 10;
-        
+        keySigGameView.managedObjectContext = self.managedObjectContext;
+        keySigGameView.currentUser = currentUser;
     }
 }
 @end

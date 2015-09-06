@@ -12,7 +12,7 @@
 
 @interface User : NSManagedObject
 {
-    NSInteger xpTiers[24];
+    int xpTiers[24];
 }
 
 @property (nonatomic, retain) NSString * name;
@@ -20,6 +20,7 @@
 @property (nonatomic, retain) NSNumber * xp;
 @property (nonatomic, retain) NSString * password;
 
-- (NSNumber *)getLevelFromXP;
+//- (NSNumber *)getLevelFromXP;
+- (void) checkLevel;
 
 @end

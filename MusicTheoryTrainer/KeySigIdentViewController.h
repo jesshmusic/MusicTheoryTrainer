@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import <math.h>
+#import "User.h"
 
 @class MusicDisplayView;
 @class KeySignature;
@@ -16,6 +17,7 @@
 @interface KeySigIdentViewController : NSViewController
 {
     KeySigGameController *keySigGame;
+    User *currentUser;
 }
 
 @property (weak) IBOutlet MusicDisplayView *mainMusicView;
@@ -27,20 +29,11 @@
 @property (weak) IBOutlet NSTextField *scoreDisplay;
 
 
+@property User *currentUser;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
-//@property int gameState;
 @property int numberOfQuestions;
-//@property int questionCount;
-//@property int currentScore;
-
-//@property (assign) int currentClef;
-//@property KeySignature *currentKeySignature;
 @property double difficultyLevel;
-//@property NSMutableArray *keyAndClefs;
-//@property float staffWidth;
-//@property float staffHeight;
-//@property float musicFontSize;
-
 @property NSString *currentAnswer;
 
 - (IBAction)submitAnswer:(id)sender;
