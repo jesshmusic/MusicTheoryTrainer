@@ -14,6 +14,7 @@
 }
 
 @property (weak) IBOutlet NSSlider *difficultySlider;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 - (IBAction)setDifficulty:(id)sender;
 

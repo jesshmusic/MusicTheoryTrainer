@@ -91,6 +91,7 @@
         [self.answerField becomeFirstResponder];
     } else {
         [self.instructionalText setStringValue:@"Sending to main menu... eventually."];
+        [self dismissViewController:self];
     }
 }
 

@@ -14,18 +14,12 @@
 @implementation MusicDisplayView
 @synthesize currentKeySignature;
 
-//- (id)initWithFrame:(NSRect)frameRect
-//{
-//    if (self = [super initWithFrame:frameRect]) {
-//        
-//        [self setMusicView_x_center:frameRect.size.width/2];
-//        [self setMusicView_y_center:frameRect.size.height/2];
-//        flat = [NSString stringWithFormat:@"%C", FLAT_SIGN];
-//        sharp = [NSString stringWithFormat:@"%C", SHARP_SIGN];
-//        currentKeySignature = [KeySignature sharedKeySignature];
-//    }
-//    return self;
-//}
+- (id)init
+{
+    flat = [NSString stringWithFormat:@"%C", FLAT_SIGN];
+    sharp = [NSString stringWithFormat:@"%C", SHARP_SIGN];
+    return self;
+}
 
 
 - (void)drawKeySignatureWithNumberAccidentals:(int)numberAccidentals
@@ -87,9 +81,6 @@
                     staff:(Staff*)newStaff
 {
     currentStaff = newStaff;
-    
-    flat = [NSString stringWithFormat:@"%C", FLAT_SIGN];
-    sharp = [NSString stringWithFormat:@"%C", SHARP_SIGN];
     
     [self drawClefWithClef:clef];
     

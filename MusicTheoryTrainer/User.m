@@ -17,6 +17,14 @@
 @dynamic xp;
 @dynamic password;
 
+- (id)init
+{
+    xpTiers[0] = 500;
+    for (NSInteger i = 1; i < 24; i++) {
+        xpTiers[i] = xpTiers[i - 1] * 2;
+    }
+    return self;
+}
 
 - (NSNumber *)getLevelFromXP
 {

@@ -8,6 +8,7 @@
 
 #import "MTTViewController.h"
 #import "KeySigIdentViewController.h"
+#import "AppDelegate.h"
 
 @interface MTTViewController ()
 
@@ -17,6 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    AppDelegate *delegate = (AppDelegate *) [[NSApplication sharedApplication] delegate];
+//    self.managedObjectContext = delegate.managedObjectContext;
     difficultyLevel = [self.difficultySlider doubleValue];
 }
 
@@ -31,6 +34,7 @@
         KeySigIdentViewController *keySigGameView = [segue destinationController];
         keySigGameView.difficultyLevel = difficultyLevel;
         keySigGameView.numberOfQuestions = 10;
+        
     }
 }
 @end

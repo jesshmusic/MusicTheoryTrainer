@@ -11,6 +11,9 @@
 
 
 @interface User : NSManagedObject
+{
+    NSInteger xpTiers[24];
+}
 
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * level;
