@@ -21,6 +21,7 @@
 }
 
 @property (weak) IBOutlet MusicDisplayView *mainMusicView;
+@property (weak) IBOutlet NSTextField *moduleName;
 
 @property (weak) IBOutlet NSButton *mainButton;
 @property (weak) IBOutlet NSTextField *answerField;

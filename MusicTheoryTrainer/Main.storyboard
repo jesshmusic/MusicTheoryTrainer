@@ -402,6 +402,19 @@
             </objects>
             <point key="canvasLocation" x="-6061" y="-2966"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Vby-yH-PBY">
+            <objects>
+                <viewController id="K59-fz-FWW" sceneMemberID="viewController">
+                    <view key="view" id="0eJ-RO-aQP">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="aEZ-cN-oRE" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4708" y="-3647"/>
+        </scene>
         <!--MTT View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
@@ -467,7 +480,7 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="JNQ-dQ-tKW" id="aZS-HM-lqD">
-                                                        <rect key="frame" x="0.0" y="0.0" width="258" height="19"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="292" height="19"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -810,20 +823,66 @@ DQ
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </box>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NhA-nd-ayh">
+                                <rect key="frame" x="853" y="603" width="114" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Selected Player: " placeholderString="" id="cQc-Yz-zOl">
+                                    <font key="font" metaFont="systemBold"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9dk-ph-jbE">
+                                <rect key="frame" x="516" y="603" width="111" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" placeholderString="Current Module" id="UVr-TK-PbJ">
+                                    <font key="font" metaFont="systemBold"/>
+                                    <color key="textColor" red="0.52578395209999995" green="0.0" blue="0.53737373740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="Frb-su-FYw" name="value" keyPath="currentUser.name" id="WYw-7F-UCF"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hrc-WX-Aaw">
+                                <rect key="frame" x="461" y="603" width="65" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Module: " placeholderString="" id="gPo-mx-EPw">
+                                    <font key="font" metaFont="systemBold"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OuR-td-dqK">
+                                <rect key="frame" x="971" y="603" width="35" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" placeholderString="User" id="qNb-Uf-JQY">
+                                    <font key="font" metaFont="systemBold"/>
+                                    <color key="textColor" red="0.52578395209790796" green="0.0" blue="0.53737373740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="Frb-su-FYw" name="value" keyPath="currentUser.name" id="qND-Dd-p23"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="NhA-nd-ayh" firstAttribute="top" secondItem="dCb-YM-JQO" secondAttribute="top" constant="20" id="0bn-Ye-FMN"/>
                             <constraint firstItem="4gy-J7-D2O" firstAttribute="leading" secondItem="dCb-YM-JQO" secondAttribute="leading" constant="20" id="1Gi-gF-aqB"/>
+                            <constraint firstItem="9dk-ph-jbE" firstAttribute="leading" secondItem="hrc-WX-Aaw" secondAttribute="trailing" constant="-6" id="5I6-Eh-geH"/>
+                            <constraint firstItem="9dk-ph-jbE" firstAttribute="top" secondItem="dCb-YM-JQO" secondAttribute="top" constant="20" id="9f6-5A-lCY"/>
                             <constraint firstAttribute="bottom" secondItem="Bo9-lG-gJv" secondAttribute="bottom" constant="30" id="FD2-nu-JrL"/>
                             <constraint firstAttribute="trailing" secondItem="Bo9-lG-gJv" secondAttribute="trailing" constant="20" id="Mtw-Sq-vBl"/>
                             <constraint firstItem="suD-Ek-gXS" firstAttribute="leading" secondItem="dCb-YM-JQO" secondAttribute="leading" constant="20" id="RZd-S6-eSt"/>
                             <constraint firstItem="Bo9-lG-gJv" firstAttribute="top" secondItem="4gy-J7-D2O" secondAttribute="bottom" constant="8" id="SXo-Xi-Sl5"/>
                             <constraint firstAttribute="trailing" secondItem="suD-Ek-gXS" secondAttribute="trailing" constant="20" id="U9f-Pn-dV8"/>
+                            <constraint firstAttribute="trailing" secondItem="OuR-td-dqK" secondAttribute="trailing" constant="20" id="WSD-GU-Qrc"/>
                             <constraint firstItem="KwE-lp-UNP" firstAttribute="top" secondItem="dCb-YM-JQO" secondAttribute="top" constant="20" id="WgN-ms-Xoy"/>
                             <constraint firstItem="suD-Ek-gXS" firstAttribute="top" secondItem="dCb-YM-JQO" secondAttribute="top" constant="47" id="aQb-Ud-BhH"/>
+                            <constraint firstItem="OuR-td-dqK" firstAttribute="top" secondItem="dCb-YM-JQO" secondAttribute="top" constant="20" id="ahg-jR-hRD"/>
                             <constraint firstItem="Bo9-lG-gJv" firstAttribute="leading" secondItem="dCb-YM-JQO" secondAttribute="leading" constant="20" id="ajg-4Y-OaO"/>
+                            <constraint firstItem="OuR-td-dqK" firstAttribute="leading" secondItem="NhA-nd-ayh" secondAttribute="trailing" constant="8" id="eAs-ze-Fve"/>
                             <constraint firstItem="4gy-J7-D2O" firstAttribute="top" secondItem="suD-Ek-gXS" secondAttribute="bottom" constant="8" id="hq7-d7-Lxu"/>
                             <constraint firstAttribute="trailing" secondItem="4gy-J7-D2O" secondAttribute="trailing" constant="20" id="nIO-ht-BTZ"/>
+                            <constraint firstAttribute="centerX" secondItem="9dk-ph-jbE" secondAttribute="centerX" constant="-59.5" id="pTR-FZ-pSc"/>
                             <constraint firstItem="KwE-lp-UNP" firstAttribute="leading" secondItem="dCb-YM-JQO" secondAttribute="leading" constant="20" id="pgl-T2-4Jg"/>
+                            <constraint firstItem="hrc-WX-Aaw" firstAttribute="top" secondItem="dCb-YM-JQO" secondAttribute="top" constant="20" id="zK5-Vx-sBr"/>
                         </constraints>
                     </view>
                     <connections>
@@ -831,6 +890,7 @@ DQ
                         <outlet property="instructionalText" destination="wUN-du-J6G" id="YpI-PH-OmC"/>
                         <outlet property="mainButton" destination="Ftv-Qk-DSC" id="k8C-IG-Hz6"/>
                         <outlet property="mainMusicView" destination="pWG-2r-alX" id="LYq-O5-mqh"/>
+                        <outlet property="moduleName" destination="9dk-ph-jbE" id="hDd-Om-vPT"/>
                         <outlet property="questionNumberDisplay" destination="Hod-7r-5c7" id="gyk-Dr-pq7"/>
                         <outlet property="scoreDisplay" destination="rGt-6V-g0P" id="jNN-aG-ylz"/>
                     </connections>

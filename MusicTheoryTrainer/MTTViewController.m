@@ -21,7 +21,7 @@
     AppDelegate *delegate = (AppDelegate *) [[NSApplication sharedApplication] delegate];
     self.managedObjectContext = delegate.managedObjectContext;
     difficultyLevel = [self.difficultySlider doubleValue];
-    currentUser = [[self.mttUserArrayCtrl selectedObjects] firstObject];
+    currentUser = (User *)[self.mttUserArrayCtrl selection];
     if (currentUser == nil) {
         self.keySigGameButton.enabled = false;
     }

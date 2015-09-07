@@ -28,6 +28,7 @@
     [self.instructionalText setStringValue:@"Click button to start the game."];
     [self.mainButton setTitle:@"Start Quiz"];
     [self.answerField setEnabled:false];
+    [self.moduleName setStringValue:[NSString stringWithFormat:@"Key Signature Identification Level: %i", (int)self.difficultyLevel]];
     keySigGame = [[KeySigGameController alloc] initWithDifficultyLevel:self.difficultyLevel numberOfQuestions:self.numberOfQuestions];
     [self.mainMusicView setupMusicObjects];
 }
@@ -97,6 +98,7 @@
     currentUserXP += keySigGame.currentScore;
     [currentUser setXp:[NSNumber numberWithInt:currentUserXP]];
     [currentUser checkLevel];
+    NSLog(@"Student level: %@", currentUser.level);
     NSError *error = nil;
     if ([self.managedObjectContext save:&error] == NO)
     {

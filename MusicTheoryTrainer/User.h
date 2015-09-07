@@ -12,7 +12,7 @@
 
 @interface User : NSManagedObject
 {
-    int xpTiers[24];
+//    int xpTiers[24];
 }
 
 @property (nonatomic, retain) NSString * name;
