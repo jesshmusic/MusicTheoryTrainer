@@ -34,7 +34,7 @@ fourthAccidental, fifthAccidental, sixthAccidental, seventhAccidental, clefLocat
     [self calculateClefLocation:currentClef];
     [self setStaffLines];
     [self setStaffSpaces];
-    if (keySig.isSharpKey) {
+    if (keySig.numberOfAccidentals > 0) {
         [self setSharpKeyPoints];
     } else {
         [self setFlatKeyPoints];

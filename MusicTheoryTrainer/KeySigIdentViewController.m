@@ -62,7 +62,7 @@
             [self.mainButton becomeFirstResponder];
         } else {
             if (keySigGame.gameState == WAITING_FOR_NEXT) {
-                [self.instructionalText setStringValue:@"INCORRECT.\nClick 'Next' to continue."];
+                [self.instructionalText setStringValue:[NSString stringWithFormat:@"INCORRECT. The correct answer is: %@\nClick 'Next' to continue.", keySigGame.currentKey.keySignatureName]];
                 [self.mainButton setTitle:@"Next"];
                 [self.answerField setStringValue:@""];
                 [self.answerField setEnabled:false];

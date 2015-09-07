@@ -21,10 +21,7 @@
 }
 
 - (void)drawKeySignatureWithNumberAccidentals:(int)numberAccidentals
-                                   isSharpKey:(BOOL)isSharpKey
 {
-    
-    if (isSharpKey) {
         if (numberAccidentals >= 1) {
             [sharp drawAtPoint:currentStaff.firstAccidental withAttributes:currentStaff.musicFontAttributes];
         }
@@ -46,30 +43,29 @@
         if (numberAccidentals == 7) {
             [sharp drawAtPoint:currentStaff.seventhAccidental withAttributes:currentStaff.musicFontAttributes];
         }
-    } else {
-        if (numberAccidentals >= 1) {
+        if (numberAccidentals <= -1) {
             [flat drawAtPoint:currentStaff.firstAccidental withAttributes:currentStaff.musicFontAttributes];
         }
-        if (numberAccidentals >= 2) {
+        if (numberAccidentals <= -2) {
             [flat drawAtPoint:currentStaff.secondAccidental withAttributes:currentStaff.musicFontAttributes];
         }
-        if (numberAccidentals >= 3) {
+        if (numberAccidentals <= -3) {
             [flat drawAtPoint:currentStaff.thirdAccidental withAttributes:currentStaff.musicFontAttributes];
         }
-        if (numberAccidentals >= 4) {
+        if (numberAccidentals <= -4) {
             [flat drawAtPoint:currentStaff.fourthAccidental withAttributes:currentStaff.musicFontAttributes];
         }
-        if (numberAccidentals >= 5) {
+        if (numberAccidentals <= -5) {
             [flat drawAtPoint:currentStaff.fifthAccidental withAttributes:currentStaff.musicFontAttributes];
         }
-        if (numberAccidentals >= 6) {
+        if (numberAccidentals <= -6) {
             [flat drawAtPoint:currentStaff.sixthAccidental withAttributes:currentStaff.musicFontAttributes];
         }
-        if (numberAccidentals == 7) {
+        if (numberAccidentals == -7) {
             [flat drawAtPoint:currentStaff.seventhAccidental withAttributes:currentStaff.musicFontAttributes];
         }
-        
-    }
+//        
+//    }
     
 }
 
@@ -161,8 +157,7 @@
     //[self setKey];
     [musicObject drawAtPoint:currentStaff.clefLocation withAttributes:currentStaff.musicFontAttributes];
     KeySignature *keySignature = [KeySignature sharedKeySignature];
-    [self drawKeySignatureWithNumberAccidentals:keySignature.numberOfAccidentals
-                                     isSharpKey:keySignature.isSharpKey];
+    [self drawKeySignatureWithNumberAccidentals:keySignature.numberOfAccidentals];
     [staffBezierPath stroke];
 }
 

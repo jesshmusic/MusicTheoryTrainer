@@ -13,7 +13,6 @@
 @interface KeySignature : NSObject 
 
 @property NSString *keySignatureName;
-@property BOOL isSharpKey;
 @property int numberOfAccidentals;
 
 + (id)sharedKeySignature;
